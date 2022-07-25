@@ -9,6 +9,7 @@ while (!int.TryParse(Console.ReadLine(), out size) || size <= 0)
 
 string[] array = new string[size];
 FillArray(array);
+int NewSize = CountNewSize(array);
 
 // функция заполняет массив
 
@@ -21,4 +22,21 @@ void FillArray(string[] arr)
             Console.WriteLine("Ошибка ввода, попробуйте снова");
     }
 
+}
+
+// функция высчитывает новый размер массива
+
+int CountNewSize(string[] arr)
+{
+    int Count = 0;
+    for (int y = 0; y < size; y++)
+    {
+        if (arr[y].Length <= 3)
+        {
+            Count = Count + 1;
+
+        }
+
+    }
+    return Count;
 }
