@@ -10,6 +10,7 @@ while (!int.TryParse(Console.ReadLine(), out size) || size <= 0)
 string[] array = new string[size];
 FillArray(array);
 int NewSize = CountNewSize(array);
+composition(array);
 
 // функция заполняет массив
 
@@ -39,4 +40,19 @@ int CountNewSize(string[] arr)
 
     }
     return Count;
+}
+
+// функция сортирует элементы
+
+void composition(string[] arr)
+{
+    string temp;
+    for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++)
+            if (i>j && arr[i].Length <= 3)
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
 }
