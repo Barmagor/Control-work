@@ -11,6 +11,8 @@ string[] array = new string[size];
 FillArray(array);
 int NewSize = CountNewSize(array);
 composition(array);
+Array.Resize(ref array, NewSize);
+
 
 // функция заполняет массив
 
