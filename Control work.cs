@@ -12,7 +12,7 @@ FillArray(array);
 int NewSize = CountNewSize(array);
 composition(array);
 Array.Resize(ref array, NewSize);
-
+printArray(array);
 
 // функция заполняет массив
 
@@ -57,4 +57,14 @@ void composition(string[] arr)
                 arr[i] = arr[j];
                 arr[j] = temp;
             }
+}
+
+// функция выводит на печать массив
+void printArray(string[] col)
+{
+    for (int z = 0; z < col.GetLength(0); z++)
+    {
+        Console.WriteLine($"Элемент: {col[z]} ");
+    }
+    Console.WriteLine(" ");
 }
